@@ -15,7 +15,7 @@ namespace MyGame
         //Constructor
         public Enemy(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
@@ -35,7 +35,7 @@ namespace MyGame
         //Set the name
         public void SetName(string name)
         {
-            this.name = name.Substring(0, 8); 
+            this.name = name.Substring(0,8); 
         }
 
 
