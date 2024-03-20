@@ -35,7 +35,12 @@ namespace MyGame
         //Set the name
         public void SetName(string name)
         {
-            this.name = name.Substring(0,8); 
+            if (name.Length >= 8) this.name = name.Substring(0,8); 
+            else
+            {
+                this.name = name;
+            }
+            
         }
 
 
@@ -56,6 +61,20 @@ namespace MyGame
                 health -= damageStillToInflict;
                 if (health < 0) health = 0; //if health goes below 0. reset it 0
                 
+            }
+        }
+        public void PickupPowerUp(PowerUp pu, float boost)
+        {
+            if (pu == PowerUp.Health)
+            {
+                health += boost;
+                if (health > 100) health = 100;
+
+            }
+            else if (pu == PowerUp.Shield)
+            {
+                shield += boost;
+                if (shield > 100) shield = 100;
             }
         }
     }

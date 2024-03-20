@@ -29,6 +29,10 @@ namespace MyGame
                 string output = $"{name} {health} {shield}";
                 Console.WriteLine(output);
             }
+
+            
+            
+            
         }
     }
 }
