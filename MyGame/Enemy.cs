@@ -32,6 +32,12 @@ namespace MyGame
         {
             return shield;
         }
+        //Set the name
+        public void SetName(string name)
+        {
+            this.name = name.Substring(0, 8); 
+        }
+
 
         
         //Deal damage to enemy
