@@ -19,11 +19,21 @@ namespace MyGame
             health = 100;
             shield = 0;
         }
-        //returns "name"
+        
         public string GetName()
         {
             return name;
         }
+        public float GetHealth()
+        {
+            return health;
+        }
+        public float GetShield()
+        {
+            return shield;
+        }
+
+        
         //Deal damage to enemy
         public void TakeDamage(float damage)
         {
