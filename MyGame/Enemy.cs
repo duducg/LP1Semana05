@@ -12,14 +12,27 @@ namespace MyGame
         private float health;
         private float shield;
 
+        //static powerup counter
+        private static int powerUpCount;
+
         //Constructor
         public Enemy(string name)
         {
             SetName(name);
             health = 100;
             shield = 0;
+            
         }
-        
+        //static Constructor:
+        //runs before any instancing is done.Only runs once
+        static Enemy()
+        {
+            powerUpCount = 0;
+        }
+        public static int GetPowerUpCount()
+        {
+            return powerUpCount;
+        } 
         public string GetName()
         {
             return name;
@@ -43,8 +56,6 @@ namespace MyGame
             
         }
 
-
-        
         //Deal damage to enemy
         public void TakeDamage(float damage)
         {
@@ -76,6 +87,7 @@ namespace MyGame
                 shield += boost;
                 if (shield > 100) shield = 100;
             }
+            powerUpCount ++;
         }
     }
 }

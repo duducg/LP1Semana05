@@ -25,10 +25,15 @@ namespace MyGame
                 string name = enemy.GetName();
                 float health = enemy.GetHealth();
                 float shield = enemy.GetShield();
+                
 
                 string output = $"{name} {health} {shield}";
                 Console.WriteLine(output);
             }
+
+            //print current powerupcount
+            //Console.WriteLine(Enemy.GetPowerUpCount());
+
 
             
             
